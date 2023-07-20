@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+.ajouter_auteur{
+	transition: 0.5s;
+	border-bottom: 1px solid #22A699;
+}
+.ajouter_auteur:hover{
+	color: #22A699;
+}
+.modifier_auteur{
+	transition: 0.5s;
+	border-bottom: 1px solid #F29727;
+	outline: none;
+}
+.modifier_auteur:hover{
+	color: #f39648;
+}
+.supprimer_auteur{
+	transition: 0.5s;
+	border-bottom: 1px solid #F24C3D;
+}
+.supprimer_auteur:hover{
+	color: #F24C3D;
+}
+.modifier_projet{
+	transition: 0.5s;
+	background-color: #F29727;
+	border: none;
+	color: #fff;
+}
+.supprimer_projet{
+	transition: 0.5s;
+	background-color: #F24C3D;
+	border: none;
+	color: #fff;
+}
+
+@media screen and (max-width: 390px){
+	.accordion-item button span button{
+		font-size: 0.8rem;
+		font-weight: bold;
+		padding: 0.9rem 0.3rem;
+	}
+}
+@media screen and (max-width: 355px){
+	.accordion-item button{
+		font-size: 0.7rem;
+/*		font-weight: bold;*/
+		padding: 0;
+	}
+	.accordion-item button .titre{
+		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 315px){
+	.accordion-item button{
+		font-size: 0.6rem;
+	}
+	.accordion-item button .titre{
+		font-size: 0.9rem;
+	}
+}
+	
