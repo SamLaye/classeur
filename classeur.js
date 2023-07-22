@@ -183,8 +183,14 @@ function add_projet(e){
 function set_projet(e){
 	let item = e.target.parentNode.parentNode;
 	let nomProjet = item.firstChild;
+	let urlProjet = item.children[1].firstChild;
 	let actuelNom = nomProjet.innerText
+	let actuelURL = urlProjet.innerText
 	let nouveauNom = prompt('Entrez un nouveau nom', actuelNom);
+	// Verification de l'url saisie
+	let pattern = /^(ftp|http|https):\/\/[^ "]+$/;
+
+	
 
 	if(nouveauNom === null){
 		nomProjet.innerText = actuelNom;
@@ -195,6 +201,20 @@ function set_projet(e){
 	 else{
 	 	nomProjet.innerText = actuelNom;
 	 }
+
+	let nouveauURL = prompt('Entrez le nouveau url', actuelURL);
+	if(pattern.test(nouveauURL)){
+		urlProjet.innerText = nouveauURL; 
+		urlProjet.setAttribute('target', '_blank');
+		urlProjet.setAttribute('href', 'nouveauURL');
+	}else{
+		alert("L'url saisie n'est pas valide!");
+		urlProjet.innerText = actuelURL;
+
+	}	
+	console.log(item.children[1])
+	
+	
 
 }
 // fonction pour supprimer un projet
